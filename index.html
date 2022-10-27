@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Buplay Champs</title>
+  <link rel="stylesheet" href="./style.css">
+  <script src="./script.js" defer></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body>
+  <h1 class="title1">Buplay Champs</h1>
+
+  <div class="duos-container">
+    <header class="title-page">
+      <h2 class="title-duos">Lista de Duplas</h2>
+    </header>
+    <form class="duos-form">
+      <p>Adicione a dupla:</p>
+      <div class="form-control">
+        <input type="text" id="duos-input" placeholder="Nome Competidores">
+        <button type="submit">
+          <i class="btn-add-duo"> Add dupla</i>
+        </button>
+      </div>
+    </form>
+    <div class="duos-result">
+      <!-- <div class="duo">
+        <h3>Rinaldo e Reinaldo</h3>
+        <button class="remove-btn">
+          <i class="fa-solid fa-xmark"></i>
+        </button>
+      </div>
+      <div class="duo">
+        <h3>Plinio e Marlon</h3>
+        <button class="remove-btn">
+          <i class="fa-solid fa-xmark"></i>
+        </button>
+      </div> -->
+    </div>
+  </div>
+  <div class="teams-container">
+    <header>
+      <h2 class="title-teams">Lista de Times</h2>
+    </header>
+    <form class="teams-form">
+      <p>Adicione o time:</p>
+      <div class="form-control">
+        <input type="text" id="teams-input" placeholder="Time/Seleção">
+        <button type="submit">
+          <i class="btn-add-team" onclick="saveTe"> Add time</i>
+        </button>
+      </div>
+    </form>
+    <div class="teams-result">
+      <!-- <div class="team">
+        <h3>Argentina</h3>
+        <button class="remove-btn">
+          <i class="fa-solid fa-xmark"></i>
+        </button>
+      </div>
+      <div class="team">
+        <h3>Portugal</h3>
+        <button class="remove-btn">
+          <i class="fa-solid fa-xmark"></i>
+        </button>
+      </div> -->
+    </div>
+  </div>
+  <div class="results-container">
+    <header>
+      <h2 class="title-results">Duplas e Times</h2>
+    </header>
+    <h3>Rinaldo e Reinaldo Argentina</h3>
+  </div>
+  <div class="sort">
+    <button class="sort-btn">Sortear Times</button>
+    <button class="clear-btn">Limpar tudo</button>
+  </div>
+  </div>
+</body>
+
+</html>

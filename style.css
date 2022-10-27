@@ -1,0 +1,166 @@
+/* Geral */
+*{
+  padding: 0;
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  color: #333;
+  box-sizing: border-box;
+}
+
+html {
+  height: 100vh;
+}
+
+body{
+  background-color: blue;
+  background-position: center cover;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+button {
+  background-color: #fdfdfd;
+  color: darkblue;
+  border: 2px solid darkblue;
+  padding: .3rem .6rem;
+  font-size: 1rem;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: 0.4s;
+  width: 7rem;
+  }
+
+button:hover {
+  background-color: black;
+  color: white;
+}
+
+button:hover > i {
+  color: #fff;
+}
+
+button i {
+  color: black;
+  font-weight: bold;
+  pointer-events: none;
+}
+
+input, select {
+  padding: 0.25rem 0.5rem;
+  }
+
+p {
+  padding-left: 1.3rem ;
+  padding-bottom: 5px;
+}
+
+/* Estilo Titulos */
+
+.title-page{
+  padding-bottom: 10px;
+  background-color: white;
+  text-align: center;
+}
+
+.title1{
+  text-align: center;
+  background-color: white;
+  height: 5rem;
+  font-size: 4rem;
+  font-style: italic;
+}
+
+.title-duos{
+  padding-bottom: 10px;
+}
+.title-teams,
+.title-results{
+  padding-bottom: 18px;
+}
+
+/* Container */
+.duos-container,
+.teams-container,
+.results-container {
+  max-width: 450px;
+  margin: 3rem auto ;
+  background-color: white;
+  padding: 1.5rem;
+  border-radius: 15px;
+}
+
+.duos-container header,
+.teams-container header, 
+.results-container header {
+  text-align: center;
+  border-bottom: 1px solid #ccc ;
+}
+
+.duos-form,
+.teams-form{
+  padding: 1rem;
+  border-bottom: 1px solid #ccc;
+}
+
+.duos-form p, 
+.teams-form p{
+  font-weight: bold;
+}
+
+.form-control{
+  display: flex;
+  justify-content: space-around;
+}
+
+.duos-result ,
+.teams-result{
+display: flex;
+flex-direction: column;
+  align-items: right;
+  padding: 1rem;
+
+  transition: .3s;
+}
+
+.duo h3,
+.team h3 {
+  flex: 1;
+  font-size: .9rem;
+}
+
+.duo,
+.team{
+  padding: .5rem;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  padding: 1rem;
+  border-bottom: 1px solid #ddd;
+  transition: .3s;
+  justify-content: center;
+}
+
+.remove-btn{
+  width: fit-content;
+  margin-right: 8px;
+}
+
+.sort{
+  max-width: 450px;
+  margin: 3rem auto ;
+  background-color: white;
+  padding: 1.5rem;
+  border-radius: 15px;
+  display: flex;
+justify-content: space-between;
+}
+
+.sort-btn,
+.clear-btn{
+  width: 10rem;
+  height:5rem;
+  color: black;
+}
+
+
