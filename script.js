@@ -9,6 +9,7 @@ const sortButton = document.querySelector('.sort-btn');
 
 const duosResult = document.querySelector('.duos-result');
 const teamsResult = document.querySelector('.teams-result');
+const results = document.querySelector('.results-container');
 const listDuo = [];
 const countDuo = 1;
 const listTeam = [];
@@ -54,7 +55,10 @@ const saveTeam = (text) => {
 };
 
 // Criar arrays
-
+function createArrayDuo() {
+  const arrayDuo = Array.from.value(duosResult);
+  console.log(arrayDuo);
+}
 // Sorteio
 
 // Limpar inputs
@@ -77,6 +81,7 @@ duosForm.addEventListener('submit', (e) => {
   if (inputValue) {
     saveDuo(inputValue);
   }
+  // createArrayDuo();
 });
 
 teamsForm.addEventListener('submit', (e) => {
@@ -102,4 +107,10 @@ clearButton.addEventListener('click', (e) => {
   e.preventDefault();
   cleanInputs();
   deleteAll();
+  results.classList.add('hide');
+});
+
+sortButton.addEventListener('click', (e) => {
+  e.preventDefault();
+  results.classList.toggle('hide');
 });

@@ -131,7 +131,8 @@ flex-direction: column;
 }
 
 .duo,
-.team{
+.team,
+.result {
   padding: .5rem;
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -140,6 +141,13 @@ flex-direction: column;
   transition: .3s;
   justify-content: center;
 }
+
+.result h3{
+  padding: 5px;
+  margin: 5px;
+  text-align: center;
+  display: inline-block;
+ }
 
 .remove-btn{
   width: fit-content;
@@ -163,4 +171,7 @@ justify-content: space-between;
   color: black;
 }
 
+.hide {
+  display: none;
+}
 
