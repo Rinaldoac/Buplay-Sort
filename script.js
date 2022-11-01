@@ -10,8 +10,9 @@ const sortButton = document.querySelector('.sort-btn');
 const duosResult = document.querySelector('.duos-result');
 const teamsResult = document.querySelector('.teams-result');
 const results = document.querySelector('.results-container');
-const listDuo = [];
-const listTeam = [];
+const result = document.querySelector('.result');
+let listDuo = [];
+let listTeam = [];
 
 // Funcoes
 const saveDuo = (text) => {
@@ -87,6 +88,10 @@ function cleanInputs() {
 function deleteAll() {
   teamsResult.innerHTML = '';
   duosResult.innerHTML = '';
+  results.innerHTML =
+    ' <header><h2 class="title-results">Duplas e Times</h2></header>';
+  listDuo = [];
+  listTeam = [];
 }
 
 // Eventos
