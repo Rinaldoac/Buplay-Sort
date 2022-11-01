@@ -11,9 +11,7 @@ const duosResult = document.querySelector('.duos-result');
 const teamsResult = document.querySelector('.teams-result');
 const results = document.querySelector('.results-container');
 const listDuo = [];
-const countDuo = 1;
 const listTeam = [];
-const countTeam = 1;
 
 // Funcoes
 const saveDuo = (text) => {
@@ -21,8 +19,10 @@ const saveDuo = (text) => {
   duo.classList.add('duo');
 
   const duoTitle = document.createElement('h3');
+  duoTitle.classList.add('duoH3');
   duoTitle.innerText = text;
   duo.appendChild(duoTitle);
+  listDuo.push(text);
 
   const removeBtn = document.createElement('button');
   removeBtn.classList.add('remove-btn');
@@ -40,8 +40,10 @@ const saveTeam = (text) => {
   team.classList.add('team');
 
   const teamTitle = document.createElement('h3');
+  teamTitle.classList.add('teamH3');
   teamTitle.innerText = text;
   team.appendChild(teamTitle);
+  listTeam.push(text);
 
   const removeBtn = document.createElement('button');
   removeBtn.classList.add('remove-btn');
@@ -54,12 +56,27 @@ const saveTeam = (text) => {
   teamsInput.focus();
 };
 
-// Criar arrays
-function createArrayDuo() {
-  const arrayDuo = Array.from.value(duosResult);
-  console.log(arrayDuo);
+//  Sorteio
+function sort() {
+  listDuo.forEach((duo) => {
+    const i = Math.floor(Math.random() * listTeam.length);
+    let team = listTeam[i];
+    const newTeam = listTeam.splice(i, 1);
+    team = newTeam;
+
+    const sorted = document.createElement('div');
+    sorted.classList.add('result');
+    const teamDuo = document.createElement('h3');
+    teamDuo.innerText = duo;
+    const teamTeam = document.createElement('h3');
+    teamTeam.innerText = newTeam;
+
+    sorted.appendChild(teamDuo);
+    sorted.appendChild(teamTeam);
+
+    results.appendChild(sorted);
+  });
 }
-// Sorteio
 
 // Limpar inputs
 function cleanInputs() {
@@ -81,7 +98,6 @@ duosForm.addEventListener('submit', (e) => {
   if (inputValue) {
     saveDuo(inputValue);
   }
-  // createArrayDuo();
 });
 
 teamsForm.addEventListener('submit', (e) => {
@@ -113,4 +129,5 @@ clearButton.addEventListener('click', (e) => {
 sortButton.addEventListener('click', (e) => {
   e.preventDefault();
   results.classList.toggle('hide');
+  sort();
 });
